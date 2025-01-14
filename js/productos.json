@@ -1,0 +1,102 @@
+[
+    {
+        "id": "nike-air-max-90",
+        "titulo": "Nike Air Max 90",
+        "imagen": "./img/tenis/air-max-90.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 1200
+    },
+    {
+        "id": "adidas-ultraboost",
+        "titulo": "Adidas Ultraboost",
+        "imagen": "./img/tenis/ultraboost.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 1500
+    },
+    {
+        "id": "nike-air-jordan-1",
+        "titulo": "Nike Air Jordan 1",
+        "imagen": "./img/tenis/air-jordan-1.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 1300
+    },
+    {
+        "id": "adidas-yeezy-boost-350",
+        "titulo": "Adidas Yeezy Boost 350",
+        "imagen": "./img/tenis/yeezy-boost-350.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 2200
+    },
+    {
+        "id": "puma-suede",
+        "titulo": "Puma Suede",
+        "imagen": "./img/tenis/puma-suede.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 900
+    },
+    {
+        "id": "converse-chuck-taylor",
+        "titulo": "Converse Chuck Taylor",
+        "imagen": "./img/tenis/chuck-taylor.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 700
+    },
+    {
+        "id": "new-balance-990",
+        "titulo": "New Balance 990",
+        "imagen": "./img/tenis/990.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 1100
+    },
+    {
+        "id": "nike-air-force-1",
+        "titulo": "Nike Air Force 1",
+        "imagen": "./img/tenis/air-force-1.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "vans-old-skool",
+        "titulo": "Vans Old Skool",
+        "imagen": "./img/tenis/old-skool.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 800
+    },
+    {
+        "id": "reebok-classic-leather",
+        "titulo": "Reebok Classic Leather",
+        "imagen": "./img/tenis/classic-leather.jpg",
+        "categoria": {
+            "nombre": "Tenis",
+            "id": "tenis"
+        },
+        "precio": 950
+    }
+]
