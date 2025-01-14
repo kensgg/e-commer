@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #4b33a8;
-    --clr-main-light: #785ce9;
-    --clr-white: #ececec;
-    --clr-gray: #e2e2e2;
-    --clr-red: #961818;
+    --clr-main: #9d2a2a; /* Teal */
+    --clr-main-light: #d86464; /* Light Teal */
+    --clr-white: #ffffff;
+    --clr-gray: #f2f2f2; /* Light Gray */
+    --clr-red: #e63939; /* Red for accents */
 }
 
 * {
@@ -149,7 +149,9 @@ main {
 }
 
 .producto-imagen {
-    max-width: 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 1rem;
 }
 
@@ -382,11 +384,7 @@ main {
         flex-wrap: wrap;
         row-gap: 1rem;
     }
-    
-
 }
-
-
 
 @media screen and (max-width: 400px) {
     .contenedor-productos {

@@ -49,16 +49,15 @@ function cargarProductosCarrito() {
             contenedorCarritoProductos.append(div);
         })
     
-    actualizarBotonesEliminar();
-    actualizarTotal();
-	
+        actualizarBotonesEliminar();
+        actualizarTotal();
+    
     } else {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled");
     }
-
 }
 
 cargarProductosCarrito();
@@ -72,6 +71,7 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+    // Mostrar el mensaje Toast con los nuevos colores
     Toastify({
         text: "Producto eliminado",
         duration: 3000,
@@ -80,10 +80,10 @@ function eliminarDelCarrito(e) {
         position: "right", 
         stopOnFocus: true, 
         style: {
-        background: "linear-gradient(to right, #4b33a8, #785ce9)",
-        borderRadius: "2rem",
-        textTransform: "uppercase",
-        fontSize: ".75rem"
+            background: "linear-gradient(to right,rgb(157, rgb(216, 100, 100) #64d8c3)", // Colores teal para la notificación
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".75rem"
         },
         offset: {
             x: '1.5rem', 
@@ -99,7 +99,6 @@ function eliminarDelCarrito(e) {
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
@@ -119,13 +118,12 @@ function vaciarCarrito() {
             localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
             cargarProductosCarrito();
         }
-      })
+    })
 }
-
 
 function actualizarTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
-    total.innerText = `$${totalCalculado}`;
+    contenedorTotal.innerText = `$${totalCalculado}`;
 }
 
 botonComprar.addEventListener("click", comprarCarrito);

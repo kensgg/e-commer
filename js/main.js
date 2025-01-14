@@ -5,8 +5,7 @@ fetch("./js/productos.json")
     .then(data => {
         productos = data;
         cargarProductos(productos);
-    })
-
+    });
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -14,18 +13,14 @@ const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 
-
 botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
-}))
-
+}));
 
 function cargarProductos(productosElegidos) {
-
     contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
-
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
@@ -38,15 +33,13 @@ function cargarProductos(productosElegidos) {
         `;
 
         contenedorProductos.append(div);
-    })
+    });
 
     actualizarBotonesAgregar();
 }
 
-
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
         botonesCategorias.forEach(boton => boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
 
@@ -59,8 +52,7 @@ botonesCategorias.forEach(boton => {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
         }
-
-    })
+    });
 });
 
 function actualizarBotonesAgregar() {
@@ -83,7 +75,7 @@ if (productosEnCarritoLS) {
 }
 
 function agregarAlCarrito(e) {
-
+    // Mostrar el mensaje Toast con los nuevos colores
     Toastify({
         text: "Producto agregado",
         duration: 3000,
@@ -92,10 +84,10 @@ function agregarAlCarrito(e) {
         position: "right",
         stopOnFocus: true, 
         style: {
-        background: "linear-gradient(to right, #4b33a8, #785ce9)",
-        borderRadius: "2rem",
-        textTransform: "uppercase",
-        fontSize: ".75rem"
+            background: "linear-gradient(to right,rgb(157, 42, 42),rgb(216, 100, 100))", // Teal shades for the toast
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".75rem"
         },
         offset: {
             x: '1.5rem', 
@@ -107,7 +99,7 @@ function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
-    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
     } else {
